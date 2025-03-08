@@ -1,0 +1,136 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "items",
+      "patterns": [
+        "Which items do you have?",
+        "What kinds of items are there?",
+        "What do you sell?"
+      ],
+      "responses": [
+        "We sell coffee and tea",
+        "We have coffee and tea"
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Do you take credit cards?",
+        "Do you accept Mastercard?",
+        "Can I pay with Paypal?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard and Paypal",
+        "We accept most major credit cards, and Paypal"
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "How long does delivery take?",
+        "How long does shipping take?",
+        "When do I get my delivery?"
+      ],
+      "responses": [
+        "Delivery takes 2-4 days",
+        "Shipping takes 2-4 days"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    },
+    {
+      "tag": "mena_uae_sop_updates",
+      "patterns": [
+        "What is the alternate name for Marasi Drive street?",
+        "How do we handle addresses with commercial entities without street names?",
+        "What should be done for Saeed Bin Ahmed Al Otaiba Street?",
+        "What is the rule for Cargo Village in Dubai?",
+        "How should we treat Central Market in Abu Dhabi?",
+        "When can a building/commercial entity be marked in the name attribute?",
+        "What to do when multiple addresses are mentioned in the name column?",
+        "What is the correction rule for Dibba Al Hisn?",
+        "What is the updated district for Al Maqta in Abu Dhabi?",
+        "How to consider Al Maqtaa or Khor Al Maqta?",
+        "What is the updated rule for Madinat Zayed Abu Dhabi City?"
+      ],
+      "responses": [
+        "Marasi Drive street is another name for Al Abraj street.",
+        "If a customer mentions a commercial entity without a street name, mark RE towards the entry of the commercial entity. Prioritize the customer-mentioned street for RE marking.",
+        "Consider ‘Saeed Bin Ahmed Al Otaiba Street’ as ‘Najda Street’ and ‘Shk Fatima Bint Mubarak Street’ as ‘Delma Street’.",
+        "Consider Cargo Village under the Al Garhoud district in Dubai.",
+        "Consider Central Market as the Al Markaziyah district.",
+        "A building/commercial entity in the name attribute can be marked if found uniquely in the given district.",
+        "When multiple addresses are mentioned in address lines and the name column, follow multiple building scenarios.",
+        "Dibba Al Hisn is part of Fujairah Emirates City, not Sharjah Emirate. Correct addresses accordingly.",
+        "Al Maqta district in Abu Dhabi is merged with Rabdan. Addresses marked as Al Maqta can be considered as Rabdan if uniquely locatable.",
+        "Al Maqtaa or Khor Al Maqta are considered the same (khor = creek). Al Maqtaa and Bawabat Abu Dhabi are merged with Rabdan.",
+        "Consider Madinat Zayed Abu Dhabi City as Al Danah only when the exact district name matches."
+      ]
+    },
+    {
+      "tag": "re_marking_priority",
+      "patterns": [
+        "What is the priority for RE marking?",
+        "How do we handle corrections for DP/RE?"
+      ],
+      "responses": [
+        "Priority for RE marking: 1) Customer mentioned road, 2) Based on PII data and customer preference, 3) Nearest connecting road.",
+        "For single corrections, correct only inaccurate geocodes without affecting the already correct ones."
+      ]
+    },
+    {
+      "tag": "delivery_hint_usage",
+      "patterns": [
+        "When do we use Delivery Hint?",
+        "How to handle incomplete addresses?",
+        "What to do if the address is unlocatable?"
+      ],
+      "responses": [
+        "Use Delivery Hint when: a) Address is locatable till building level, b) Address is locatable till road level, c) Address is unlocatable but DH is locatable.",
+        "If the customer-given address isn't locatable in the given district but is locatable in the DH/PDL district, correct the geocodes based on DH/PDL."
+      ]
+    }
+  ]
+}
